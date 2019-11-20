@@ -1,7 +1,9 @@
 <br/>
-<h1 class="bluecolor1">Patients</h1>
-<%= link_to 'Add Patient', new_patient_path, class:"ui basic orange small button" %>
+<h1 class="bluecolor2">Patients
+<%= link_to 'Add Patient', new_patient_path, class:"ui basic orange small button right floated" %></h1>
+<h4 class="ui header small">Select a Patient Below</h4>
 <hr />
+<h2><%= @patients.length <= 0 ? "No Patients" : "" %></h2> 
 <div class="ui grid">
   <% @patients.each do |patient| %>
     <div class="four wide column">

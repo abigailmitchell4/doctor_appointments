@@ -1,6 +1,5 @@
 <br/>
-<div class="ui small-container">
-<h1 class="bluecolor1">Doctors
+<h1 class="bluecolor2">Doctors
 <%= link_to 'Add doctor', new_doctor_path, class:"ui basic orange small button right floated" %></h1>
 <h4 class="ui header small bluecolor2">Select a Doctor Below</h4>
 <hr />
@@ -10,8 +9,7 @@
     <div class="six wide column">
       <%= link_to doctor.full_name, doctor, class:"ui header small bluecolor2" %>
     -
-      <%= link_to doctor.specialty, doctor, class:"ui header small bluecolor2" %>
+      <%= link_to doctor.specialty, doctor, class:"ui header small orange1" %>
     </div>
   <% end %>
-</div>
 </div>
