@@ -1,0 +1,11 @@
+<br/>
+<h1 class="bluecolor1">Patients</h1>
+<%= link_to 'Add Patient', new_patient_path, class:"ui basic orange small button" %>
+<hr />
+<div class="ui grid">
+  <% @patients.each do |patient| %>
+    <div class="four wide column">
+      <%= link_to patient.full_name, patient, class:"small ui header bluecolor2" %>
+    </div>
+<% end %>
+</div>

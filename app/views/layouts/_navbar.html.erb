@@ -1,0 +1,33 @@
+
+
+<h3 class="padding3menu"> 
+  <a class="ui heading bluecolor2"><%= link_to "Med-Appointment Scheduling", root_path, class: "ui header bluecolor1"%></a></h3>
+    <div class="ui secondary pointing menu padding2menu">
+        <% if current_user %>
+        
+          <a class="item">
+            <%= link_to 'Doctors', doctors_path, class:"ui header" %>
+          </a>
+          <a class="item">
+            <%= link_to 'Add doctor', new_doctor_path, class:"ui header" %>
+          </a>
+          <a class="item">
+            <%= link_to 'Patients', patients_path, class:"ui header" %>
+          </a>
+          <a class="item">
+            <%= link_to 'Add Patient', new_patient_path, class:"ui header" %>
+          </a>
+          <div class="right menu">
+          <a class="item"> 
+          <%= link_to "Log Out", destroy_user_session_path, method: :delete, class:"ui header" %>
+          </a>
+          </div>
+        <% else %>
+          <a class="item">
+            <%= link_to "Register", new_user_registration_path, class:"ui small header" %>
+          </a>
+          <a class="item">
+            <%= link_to "Log In", new_user_session_path, class:"ui small header" %>
+          </a>
+        <% end %>
+    </div>

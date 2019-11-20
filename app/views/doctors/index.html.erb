@@ -1,0 +1,17 @@
+<br/>
+<div class="ui small-container">
+<h1 class="bluecolor1">Doctors
+<%= link_to 'Add doctor', new_doctor_path, class:"ui basic orange small button right floated" %></h1>
+<h4 class="ui header small bluecolor2">Select a Doctor Below</h4>
+<hr />
+<h2><%= @doctors.length <= 0 ? "No Doctors" : "" %></h2> 
+<div class="ui grid">
+  <% @doctors.each do |doctor| %>
+    <div class="six wide column">
+      <%= link_to doctor.full_name, doctor, class:"ui header small bluecolor2" %>
+    -
+      <%= link_to doctor.specialty, doctor, class:"ui header small bluecolor2" %>
+    </div>
+  <% end %>
+</div>
+</div>
